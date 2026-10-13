@@ -4,6 +4,8 @@
 
 最新范围、已完成事项和后续步骤见 [PROJECT_PLAN.md](PROJECT_PLAN.md)。
 
+想先了解项目做了什么、有哪些模块以及各模块对应的文件夹，请阅读 [项目概览与模块说明](PROJECT_OVERVIEW.md)。
+
 **GitHub 版本管理（2026-10-13）：** 私有仓库 [qiiiiii4869/apex-ringlab](https://github.com/qiiiiii4869/apex-ringlab)。仓库保存源码、前端、模型、正式数据、测试与文档；本地虚拟环境、原始采集、缓存、日志、临时输出和部署连接记录不提交。文件用途见 [FILE_GUIDE.md](FILE_GUIDE.md)。`.gitattributes` 保留文件原始字节，避免换行转换改变训练清单中的 SHA-256；不要对正式库和模型做无意义的格式重写。
 
 **服务与并发优化（2026-10-13）：** FastAPI + Uvicorn 已部署到 Ubuntu ECS，仍只监听服务器本机。固定依赖、有限工作池 / 排队、限流、超时、来源和隐私日志检查通过；SIFT 精确匹配改为分块矩阵计算。Windows / Linux 各 65 项 Python 测试通过，用户本地网页手动验收通过。目标服务器两人识图最长约 5.9 秒（优化前约 26.5 秒），四人同时识图全部成功、最长约 10.9 秒；这些仅为已测截图结果。域名 `codeqiqi.com` 已购买且用户确认实名通过，备案 / HTTPS 和目标浏览器验收待完成。部署和回退说明见 [DEPLOYMENT.md](DEPLOYMENT.md)。
