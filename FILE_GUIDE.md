@@ -60,7 +60,8 @@
 | [FILE_GUIDE.md](FILE_GUIDE.md) |  | 本次生成的项目文件说明：逐项解释项目文件，并介绍依赖环境和完整清单的阅读方法。 |
 | [HANDOFF.md](HANDOFF.md) | 28755 | 接续工作的交接文档：当前运行版本、路径、已经验证的事项与后续工作。也记录采集暂停、历史测试集已经查看等约束。 |
 | [PROJECT_PLAN.md](PROJECT_PLAN.md) | 42168 | 项目计划书：需求、技术路线、里程碑、已完成证据和待办。顶部记录最新域名、部署与并发进度；下方保留历史，不应把旧状态当成当前状态。 |
-| [README.md](README.md) | 11936 | 项目总入口：介绍需求、当前结果、目录与常用命令。适合第一次了解项目；更细的进度看计划书和交接文档。 |
+| [README.md](README.md) | — | 项目概览与模块说明：介绍项目做了什么、八个模块及对应目录。与 PROJECT_OVERVIEW.md 对调后，作为 GitHub 首页展示文档。 |
+| [PROJECT_OVERVIEW.md](PROJECT_OVERVIEW.md) | — | 原 README 内容：安装、启动、常用命令、采集及研究结果。已与 README.md 对调，两份文档的互相引用同步更新。 |
 | [requirements-dev.txt](requirements-dev.txt) | 88 | 开发和验收依赖：先包含运行锁定清单，再添加 httpx、httpcore、certifi、psutil，用于接口测试与资源监测。 |
 | [requirements.lock.txt](requirements.lock.txt) | 623 | 运行依赖及精确版本清单，含数值计算、机器学习、图像识别、FastAPI / Uvicorn 等；模型加载依赖这些版本。Windows 专用依赖带平台条件。 |
 | [requirements.txt](requirements.txt) | 25 | 安装入口，只引用 requirements.lock.txt；pip install -r requirements.txt 会安装固定的运行依赖。 |
