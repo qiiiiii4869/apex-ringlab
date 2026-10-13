@@ -1,0 +1,12 @@
+{
+  "recognition_requests": 5,
+  "statuses": {
+    "200": 4,
+    "503": 1
+  },
+  "max_observed_pending": 4,
+  "health_during_recognition_seconds": 0.04593077200024709,
+  "prediction_during_recognition_seconds": 0.2017097730004025,
+  "recovered": true,
+  "actual_image_fixture_used": true
+}

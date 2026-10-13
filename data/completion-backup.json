@@ -1,0 +1,8 @@
+{
+  "backup": "data\\raw\\checkpoints\\target-1000-complete-20261012-180452.zip",
+  "files": 28,
+  "sha256": {
+    "data/rings.json": "3a5037816e8277d064bbe635b0fa7ebd0ca08c4206ccd6537210b544c2c78f9a",
+    "data/raw/ringguessr-pairs.jsonl": "3ca03c0d679cf9ecc4d5dab28d9dd728c0b37341b6ca9bdd2d1ef52d73f736fe"
+  }
+}

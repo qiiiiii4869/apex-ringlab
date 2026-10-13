@@ -1,0 +1,69 @@
+{
+  "total": 1001,
+  "new": 0,
+  "duplicates": 1394,
+  "other_maps": 0,
+  "invalid": 16,
+  "errors": [
+    {
+      "line": 13,
+      "reason": "后续圈必须缩小且包含在上一圈内"
+    },
+    {
+      "line": 78,
+      "reason": "来源模式必须为 ALGS 或 PUBLIC"
+    },
+    {
+      "line": 79,
+      "reason": "来源模式必须为 ALGS 或 PUBLIC"
+    },
+    {
+      "line": 102,
+      "reason": "后续圈必须缩小且包含在上一圈内"
+    },
+    {
+      "line": 152,
+      "reason": "最终圈必须位于已知安全区内"
+    },
+    {
+      "line": 157,
+      "reason": "后续圈必须缩小且包含在上一圈内"
+    },
+    {
+      "line": 249,
+      "reason": "后续圈必须缩小且包含在上一圈内"
+    },
+    {
+      "line": 278,
+      "reason": "后续圈必须缩小且包含在上一圈内"
+    },
+    {
+      "line": 428,
+      "reason": "后续圈必须缩小且包含在上一圈内"
+    },
+    {
+      "line": 443,
+      "reason": "后续圈必须缩小且包含在上一圈内"
+    }
+  ],
+  "source_modes": {
+    "ALGS": 34,
+    "PUBLIC": 967
+  },
+  "map_versions": {
+    "mp_rr_desertlands_hu": 1001
+  },
+  "audit": {
+    "records": 1001,
+    "unique_first_rings": 987,
+    "repeated_first_ring_groups": 14,
+    "conflict_groups": 1,
+    "conflict_examples": [
+      [
+        "rg_0332fa5d3cd7241b938bc58b",
+        "rg_879ec21cb4502b81ecb6440c"
+      ]
+    ],
+    "interpretation": "仅为样本内检查，不能证明所有首圈唯一决定最终圈；build 未知时无法确认同机制版本"
+  }
+}

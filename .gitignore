@@ -1,0 +1,24 @@
+.venv/
+__pycache__/
+*.pyc
+data/raw/
+data/cache/
+outputs/
+*.log
+
+# Local configuration and authentication material
+.env
+.env.*
+!.env.example
+!.env.*.example
+.ssh/
+*.pem
+*.key
+*.p12
+*.pfx
+*.ppk
+id_rsa*
+id_ed25519*
+*.tmp
+Thumbs.db
+.DS_Store

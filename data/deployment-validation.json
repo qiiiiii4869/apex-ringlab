@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-10-13T05:03:36.957621+00:00",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.13",
+  "concurrency": 4,
+  "scenarios": {
+    "predict_two_clients": {
+      "requests": 2,
+      "statuses": {
+        "200": 2
+      },
+      "success_rate": 1.0,
+      "max_seconds": 0.051616900018416345
+    },
+    "predict": {
+      "requests": 8,
+      "statuses": {
+        "200": 3,
+        "503": 5
+      },
+      "success_rate": 0.375,
+      "median_seconds": 0.003249749992392026,
+      "max_seconds": 0.07562370001687668,
+      "successful_max_seconds": 0.07562370001687668
+    },
+    "recognize_two_clients": {
+      "requests": 2,
+      "statuses": {
+        "200": 2
+      },
+      "success_rate": 1.0,
+      "max_seconds": 1.6235906000074465
+    },
+    "recognize": {
+      "requests": 8,
+      "statuses": {
+        "200": 2,
+        "503": 6
+      },
+      "success_rate": 0.25,
+      "median_seconds": 0.0025131500005954877,
+      "max_seconds": 1.6916950000158977,
+      "successful_max_seconds": 1.6916950000158977
+    }
+  },
+  "process_peaks": {
+    "rss_bytes": 636207104,
+    "cpu_percent_one_core": 226.1,
+    "includes_child_processes": true
+  },
+  "health_after": {
+    "status": "ready",
+    "models": [
+      1,
+      2,
+      3
+    ],
+    "pending": {
+      "predict": 0,
+      "recognize": 0
+    }
+  },
+  "actual_image_fixture_used": true,
+  "limitations": [
+    "Local CPU measurements are not the eventual cloud server's capacity",
+    "Burst rejection is expected bounded overload feedback, not an inference error",
+    "No Linux container or public HTTPS verification on this Windows host"
+  ],
+  "verification": {
+    "python_tests": 60,
+    "javascript_geometry_checks": 6,
+    "javascript_session_checks": "passed",
+    "javascript_syntax": "passed",
+    "clean_environment_install_and_pip_check": "passed",
+    "dataset_and_models_unchanged": true,
+    "algorithm_and_session_source_unchanged": true,
+    "release_files_verified": 39,
+    "release_sha256": "dd941df020b963f350178d0ece723e73eb97f8eebd471c19ba3a8285c4528e7c",
+    "browser_regression": "blocked_by_browser_url_security_policy",
+    "user_manual_browser_acceptance": {
+      "status": "passed",
+      "confirmed_on": "2026-10-13",
+      "evidence": "用户在对话中确认：我验收通过了",
+      "scope": "local_web_flow",
+      "itemized_results_or_new_screenshots_provided": false
+    },
+    "linux_container": "not_tested_no_docker",
+    "https_proxy": "not_tested_no_caddy_or_domain"
+  }
+}

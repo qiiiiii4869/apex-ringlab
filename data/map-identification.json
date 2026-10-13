@@ -1,0 +1,17 @@
+{
+  "worlds_edge": {
+    "source_identifier_prefix": "mp_rr_desertlands",
+    "observed_identifiers": ["mp_rr_desertlands_hu"],
+    "verification": {
+      "source_game_id": "2e19755b83ff412fb59fd13061c99f17",
+      "source_map_identifier": "mp_rr_desertlands_hu",
+      "overview_url": "https://apexlegendsstatus.com/algs/Y5-Split2/ALGS-Championships/Global/Overview",
+      "replay_link": "/algs/game/2e19755b83ff412fb59fd13061c99f17",
+      "visible_title": "B vs. D - Game #5 - World's Edge",
+      "verified_on": "2026-10-11",
+      "method": "matched_source_game_id_to_visible_overview_map_name"
+    },
+    "asset_url": "https://apexlegendsstatus.com/dgs/mp_rr_desertlands_hu.png",
+    "current_ranked_version_verified": false
+  }
+}

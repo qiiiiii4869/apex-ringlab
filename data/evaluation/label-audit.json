@@ -1,0 +1,463 @@
+{
+  "audit": {
+    "records": 1001,
+    "unique_first_rings": 987,
+    "repeated_first_ring_groups": 14,
+    "conflict_groups": 1,
+    "conflict_examples": [
+      [
+        "rg_0332fa5d3cd7241b938bc58b",
+        "rg_879ec21cb4502b81ecb6440c"
+      ]
+    ],
+    "interpretation": "仅为样本内检查，不能证明所有首圈唯一决定最终圈；build 未知时无法确认同机制版本"
+  },
+  "raw_sha256": "3ca03c0d679cf9ecc4d5dab28d9dd728c0b37341b6ca9bdd2d1ef52d73f736fe",
+  "radius_counts": {
+    "728": 1000,
+    "1216": 1
+  },
+  "known_radius_counts": {
+    "1": {
+      "4825": 1001
+    },
+    "2": {
+      "2367": 1000,
+      "4643": 1
+    },
+    "3": {
+      "1457": 1000,
+      "2204": 1
+    }
+  },
+  "unusual_known_radius_records": [
+    {
+      "id": "rg_8e22168081436199fa1e26f4",
+      "source": "apexlegendsstatus_ringguessr",
+      "source_url": "https://apexlegendsstatus.com/algs/ring-guessr",
+      "source_game_id": "b0d368c41020856783fa9f0ce70db399",
+      "source_mode": "PUBLIC",
+      "game_mode": "ranked",
+      "game_mode_evidence": {
+        "type": "user_confirmation",
+        "confirmed_on": "2026-10-11",
+        "statement": "用户确认 Ring Guessr 的 PUBLIC 来源属于排位，可用于本项目。"
+      },
+      "map": "worlds_edge",
+      "map_version": "mp_rr_desertlands_hu",
+      "build": null,
+      "collected_at": "2026-10-12T06:03:06.4059129Z",
+      "coordinate_size": 16384,
+      "known_rings": [
+        {
+          "stage": 1,
+          "x": 8096,
+          "y": 11495,
+          "r": 4825
+        },
+        {
+          "stage": 2,
+          "x": 8096,
+          "y": 11495,
+          "r": 4643
+        },
+        {
+          "stage": 3,
+          "x": 9811,
+          "y": 14024,
+          "r": 1457
+        }
+      ],
+      "final_ring": {
+        "x": 10168,
+        "y": 14563,
+        "r": 728,
+        "label": "ringguessr_final",
+        "stage": null
+      },
+      "game_description": "Public Match - b0d368c41020856783fa9f0ce70db399",
+      "provenance": {
+        "method": "same_session_same_round",
+        "round": 1,
+        "batch_id": "d2626c737ef54a7395f6064180085d52",
+        "duplicate_key": "map_source_known_and_final_coordinates"
+      },
+      "source_game_ids": [
+        "b0d368c41020856783fa9f0ce70db399"
+      ]
+    },
+    {
+      "id": "rg_c92b2cafc2ab08fe9b69b8e1",
+      "source": "apexlegendsstatus_ringguessr",
+      "source_url": "https://apexlegendsstatus.com/algs/ring-guessr",
+      "source_game_id": "19ab7ec1a0adf49daaaa6ad3b5a619e4",
+      "source_mode": "PUBLIC",
+      "game_mode": "ranked",
+      "game_mode_evidence": {
+        "type": "user_confirmation",
+        "confirmed_on": "2026-10-11",
+        "statement": "用户确认 Ring Guessr 的 PUBLIC 来源属于排位，可用于本项目。"
+      },
+      "map": "worlds_edge",
+      "map_version": "mp_rr_desertlands_hu",
+      "build": null,
+      "collected_at": "2026-10-12T08:39:16.6263260Z",
+      "coordinate_size": 16384,
+      "known_rings": [
+        {
+          "stage": 1,
+          "x": 6074,
+          "y": 8433,
+          "r": 4825
+        },
+        {
+          "stage": 2,
+          "x": 3631,
+          "y": 8697,
+          "r": 2367
+        },
+        {
+          "stage": 3,
+          "x": 3631,
+          "y": 8697,
+          "r": 2204
+        }
+      ],
+      "final_ring": {
+        "x": 3397,
+        "y": 7714,
+        "r": 728,
+        "label": "ringguessr_final",
+        "stage": null
+      },
+      "game_description": "Public Match - 19ab7ec1a0adf49daaaa6ad3b5a619e4",
+      "provenance": {
+        "method": "same_session_same_round",
+        "round": 3,
+        "batch_id": "b8b9e89d181c467fbea3e4699f3ff71f",
+        "duplicate_key": "map_source_known_and_final_coordinates"
+      },
+      "source_game_ids": [
+        "19ab7ec1a0adf49daaaa6ad3b5a619e4"
+      ]
+    }
+  ],
+  "conflict_records": [
+    {
+      "id": "rg_0332fa5d3cd7241b938bc58b",
+      "source": "apexlegendsstatus_ringguessr",
+      "source_url": "https://apexlegendsstatus.com/algs/ring-guessr",
+      "source_game_id": "38c32ac2d76587cef2739d7b0efb79dd",
+      "source_mode": "PUBLIC",
+      "game_mode": "ranked",
+      "game_mode_evidence": {
+        "type": "user_confirmation",
+        "confirmed_on": "2026-10-11",
+        "statement": "用户确认 Ring Guessr 的 PUBLIC 来源属于排位，可用于本项目。"
+      },
+      "map": "worlds_edge",
+      "map_version": "mp_rr_desertlands_hu",
+      "build": null,
+      "collected_at": "2026-10-12T07:24:46.7122271Z",
+      "coordinate_size": 16384,
+      "known_rings": [
+        {
+          "stage": 1,
+          "x": 6966,
+          "y": 10232,
+          "r": 4825
+        },
+        {
+          "stage": 2,
+          "x": 4764,
+          "y": 11322,
+          "r": 2367
+        },
+        {
+          "stage": 3,
+          "x": 4461,
+          "y": 12096,
+          "r": 1457
+        }
+      ],
+      "final_ring": {
+        "x": 3940,
+        "y": 12251,
+        "r": 728,
+        "label": "ringguessr_final",
+        "stage": null
+      },
+      "game_description": "Public Match - 38c32ac2d76587cef2739d7b0efb79dd",
+      "provenance": {
+        "method": "same_session_same_round",
+        "round": 1,
+        "batch_id": "66e5bacb6173489190e58ec896495cb7",
+        "duplicate_key": "map_source_known_and_final_coordinates"
+      },
+      "source_game_ids": [
+        "38c32ac2d76587cef2739d7b0efb79dd"
+      ]
+    },
+    {
+      "id": "rg_879ec21cb4502b81ecb6440c",
+      "source": "apexlegendsstatus_ringguessr",
+      "source_url": "https://apexlegendsstatus.com/algs/ring-guessr",
+      "source_game_id": "fff9e84dfb2e8757c0b46143e0292e7c",
+      "source_mode": "PUBLIC",
+      "game_mode": "ranked",
+      "game_mode_evidence": {
+        "type": "user_confirmation",
+        "confirmed_on": "2026-10-11",
+        "statement": "用户确认 Ring Guessr 的 PUBLIC 来源属于排位，可用于本项目。"
+      },
+      "map": "worlds_edge",
+      "map_version": "mp_rr_desertlands_hu",
+      "build": null,
+      "collected_at": "2026-10-12T09:40:14.7021909Z",
+      "coordinate_size": 16384,
+      "known_rings": [
+        {
+          "stage": 1,
+          "x": 6966,
+          "y": 10232,
+          "r": 4825
+        },
+        {
+          "stage": 2,
+          "x": 4764,
+          "y": 11322,
+          "r": 2367
+        },
+        {
+          "stage": 3,
+          "x": 4461,
+          "y": 12096,
+          "r": 1457
+        }
+      ],
+      "final_ring": {
+        "x": 4461,
+        "y": 12096,
+        "r": 1216,
+        "label": "ringguessr_final",
+        "stage": null
+      },
+      "game_description": "Public Match - fff9e84dfb2e8757c0b46143e0292e7c",
+      "provenance": {
+        "method": "same_session_same_round",
+        "round": 6,
+        "batch_id": "7c7d389e640c4ef2a9a85ee331b44194",
+        "duplicate_key": "map_source_known_and_final_coordinates"
+      },
+      "source_game_ids": [
+        "fff9e84dfb2e8757c0b46143e0292e7c"
+      ]
+    }
+  ],
+  "raw_evidence": [
+    {
+      "record_ids": [
+        "rg_8e22168081436199fa1e26f4"
+      ],
+      "line": 731,
+      "line_utf8_sha256": "bc3dc2de9ba2ca899d7b60dc2873462be0dd398f019a5baec648b915cd26f936",
+      "batch_id": "d2626c737ef54a7395f6064180085d52",
+      "round": 1,
+      "collected_at": "2026-10-12T06:03:06.4059129Z",
+      "source_game_id": "b0d368c41020856783fa9f0ce70db399",
+      "known_rings": [
+        {
+          "x": 8096,
+          "y": 11495,
+          "r": 4825
+        },
+        {
+          "x": 8096,
+          "y": 11495,
+          "r": 4643
+        },
+        {
+          "x": 9811,
+          "y": 14024,
+          "r": 1457
+        }
+      ],
+      "final_ring": {
+        "x": 10168,
+        "y": 14563,
+        "r": 728
+      }
+    },
+    {
+      "record_ids": [
+        "rg_8e22168081436199fa1e26f4"
+      ],
+      "line": 809,
+      "line_utf8_sha256": "78e614ac804d07c88e1aa1c25c9dd9897c1b2b9d02ed94ac36844de0ef61579c",
+      "batch_id": "66e5bacb6173489190e58ec896495cb7",
+      "round": 2,
+      "collected_at": "2026-10-12T06:54:12.8305344Z",
+      "source_game_id": "b0d368c41020856783fa9f0ce70db399",
+      "known_rings": [
+        {
+          "x": 8096,
+          "y": 11495,
+          "r": 4825
+        },
+        {
+          "x": 8096,
+          "y": 11495,
+          "r": 4643
+        },
+        {
+          "x": 9811,
+          "y": 14024,
+          "r": 1457
+        }
+      ],
+      "final_ring": {
+        "x": 10168,
+        "y": 14563,
+        "r": 728
+      }
+    },
+    {
+      "record_ids": [
+        "rg_0332fa5d3cd7241b938bc58b"
+      ],
+      "line": 924,
+      "line_utf8_sha256": "6d0daff6e45377ac1e659791a5684a36a0190121b2786348ab2dfa1c8547106e",
+      "batch_id": "66e5bacb6173489190e58ec896495cb7",
+      "round": 1,
+      "collected_at": "2026-10-12T07:24:46.7122271Z",
+      "source_game_id": "38c32ac2d76587cef2739d7b0efb79dd",
+      "known_rings": [
+        {
+          "x": 6966,
+          "y": 10232,
+          "r": 4825
+        },
+        {
+          "x": 4764,
+          "y": 11322,
+          "r": 2367
+        },
+        {
+          "x": 4461,
+          "y": 12096,
+          "r": 1457
+        }
+      ],
+      "final_ring": {
+        "x": 3940,
+        "y": 12251,
+        "r": 728
+      }
+    },
+    {
+      "record_ids": [
+        "rg_0332fa5d3cd7241b938bc58b"
+      ],
+      "line": 1036,
+      "line_utf8_sha256": "a004d28536c6659db3ee91771c9b562cdbe81fbc14736f5d18c8683ed5a6c632",
+      "batch_id": "66e5bacb6173489190e58ec896495cb7",
+      "round": 9,
+      "collected_at": "2026-10-12T07:55:09.9789695Z",
+      "source_game_id": "38c32ac2d76587cef2739d7b0efb79dd",
+      "known_rings": [
+        {
+          "x": 6966,
+          "y": 10232,
+          "r": 4825
+        },
+        {
+          "x": 4764,
+          "y": 11322,
+          "r": 2367
+        },
+        {
+          "x": 4461,
+          "y": 12096,
+          "r": 1457
+        }
+      ],
+      "final_ring": {
+        "x": 3940,
+        "y": 12251,
+        "r": 728
+      }
+    },
+    {
+      "record_ids": [
+        "rg_c92b2cafc2ab08fe9b69b8e1"
+      ],
+      "line": 1181,
+      "line_utf8_sha256": "057d1d6cf5f1c878b331f4336a7d185608b67416a579edc364c8e32cffae9b00",
+      "batch_id": "b8b9e89d181c467fbea3e4699f3ff71f",
+      "round": 3,
+      "collected_at": "2026-10-12T08:39:16.6263260Z",
+      "source_game_id": "19ab7ec1a0adf49daaaa6ad3b5a619e4",
+      "known_rings": [
+        {
+          "x": 6074,
+          "y": 8433,
+          "r": 4825
+        },
+        {
+          "x": 3631,
+          "y": 8697,
+          "r": 2367
+        },
+        {
+          "x": 3631,
+          "y": 8697,
+          "r": 2204
+        }
+      ],
+      "final_ring": {
+        "x": 3397,
+        "y": 7714,
+        "r": 728
+      }
+    },
+    {
+      "record_ids": [
+        "rg_879ec21cb4502b81ecb6440c"
+      ],
+      "line": 1396,
+      "line_utf8_sha256": "4ea5d46dd60ff3f10a8bd24b9a86f0935ce76113c0d933eb9293ca6cb9294ea8",
+      "batch_id": "7c7d389e640c4ef2a9a85ee331b44194",
+      "round": 6,
+      "collected_at": "2026-10-12T09:40:14.7021909Z",
+      "source_game_id": "fff9e84dfb2e8757c0b46143e0292e7c",
+      "known_rings": [
+        {
+          "x": 6966,
+          "y": 10232,
+          "r": 4825
+        },
+        {
+          "x": 4764,
+          "y": 11322,
+          "r": 2367
+        },
+        {
+          "x": 4461,
+          "y": 12096,
+          "r": 1457
+        }
+      ],
+      "final_ring": {
+        "x": 4461,
+        "y": 12096,
+        "r": 1216
+      }
+    }
+  ],
+  "official_page": "https://apexlegendsstatus.com/algs/ring-guessr",
+  "official_page_checked_on": "2026-10-12",
+  "page_evidence": "页面说明展示前三圈并猜测 last ring 的圆心，没有定义内部目标圈次。",
+  "conclusion": "原始响应确认目标差异；内部圈次、build、差异原因仍未确认，不能推断服务器刷圈机制。",
+  "primary_policy": "主评估限定源站目标半径 728；其他半径仅在全标签敏感性分析中使用，正式库不删改。",
+  "replay_constraint": "此前回放接口出现 HTTP 429 / CAPTCHA_REQUIRED，本次未重试受限回放接口。"
+}

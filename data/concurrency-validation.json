@@ -1,0 +1,138 @@
+{
+  "date": "2026-10-13",
+  "timezone": "Asia/Shanghai",
+  "before_report": "data/server-validation.json",
+  "two_client_recognition": {
+    "before_max_seconds": 26.541588131000026,
+    "after_max_seconds": 5.9059718970001995,
+    "reduction_percent": 77.74823470302387
+  },
+  "four_client_recognition": {
+    "requests": 4,
+    "statuses": {
+      "200": 4
+    },
+    "success_rate": 1.0,
+    "max_seconds": 10.897735772000033
+  },
+  "four_concurrent_eight_requests": {
+    "predict": {
+      "requests": 8,
+      "statuses": {
+        "200": 8
+      },
+      "success_rate": 1.0,
+      "median_seconds": 0.23299730149983588,
+      "max_seconds": 0.2442861829999856,
+      "successful_max_seconds": 0.2442861829999856
+    },
+    "recognize": {
+      "requests": 8,
+      "statuses": {
+        "200": 8
+      },
+      "success_rate": 1.0,
+      "median_seconds": 10.219664085499971,
+      "max_seconds": 10.691838211999766,
+      "successful_max_seconds": 10.691838211999766
+    }
+  },
+  "process_peaks": {
+    "rss_bytes": 794890240,
+    "cpu_percent_one_core": 207.0,
+    "includes_child_processes": true
+  },
+  "live_overload_check": {
+    "recognition_requests": 5,
+    "statuses": {
+      "200": 4,
+      "503": 1
+    },
+    "max_observed_pending": 4,
+    "health_during_recognition_seconds": 0.04593077200024709,
+    "prediction_during_recognition_seconds": 0.2017097730004025,
+    "recovered": true,
+    "actual_image_fixture_used": true
+  },
+  "verification": {
+    "windows_python_tests": 65,
+    "linux_python_tests": 65,
+    "pip_check": "passed",
+    "original_and_downscaled_jpeg_recognition": "passed",
+    "exact_opencv_distance_and_mutual_selection_regression": "passed",
+    "prediction_algorithms_session_models_and_dataset_unchanged": true,
+    "fingerprinted_files": [
+      "data/rings.json",
+      "data/training/manifest.json",
+      "data/training/example-query.json",
+      "ringlab/model.py",
+      "ringlab/probability.py",
+      "ringlab/retrieval.py",
+      "web/session.mjs",
+      "models/stage-1.joblib",
+      "models/stage-2.joblib",
+      "models/stage-3.joblib"
+    ]
+  },
+  "capacity": {
+    "prediction_workers": 1,
+    "prediction_queue": 7,
+    "recognition_workers": 1,
+    "recognition_queue": 3,
+    "memory_limit_bytes": 1073741824,
+    "cpu_limit": 2,
+    "opencv_threads": 2
+  },
+  "profiling": {
+    "before_single_seconds": 14.681453163,
+    "after_single_seconds": 2.967634006,
+    "before_matched_features": 106,
+    "after_matched_features": 106,
+    "before_inliers": 40,
+    "after_inliers": 40,
+    "fixture_circle_coordinates_identical": true
+  },
+  "deployment": {
+    "health": {
+      "status": "ready",
+      "models": [
+        1,
+        2,
+        3
+      ],
+      "pending": {
+        "predict": 0,
+        "recognize": 0
+      }
+    },
+    "docker_health": "healthy",
+    "image_id": "sha256:360b47fcb6c036da9530cbe9551668883896dc850098c88fb40ed7498f362b5a",
+    "container": "ringlab-internal-ringlab-1",
+    "user": "ringlab",
+    "read_only": true,
+    "memory_limit_bytes": 1073741824,
+    "cpu_limit_nano": 2000000000,
+    "restart_policy": "unless-stopped",
+    "oom_killed": false,
+    "listen": "127.0.0.1:8765",
+    "temporary_wheel_server_stopped": true,
+    "docker_boot_enabled": true,
+    "page_assets_and_js_mime": "passed",
+    "stages_1_2_3_prediction": "passed",
+    "origin_and_private_files": "passed",
+    "container_restart_recovery": "passed",
+    "whole_ecs_reboot_tested": false,
+    "domain": null,
+    "public_https": "not_configured"
+  },
+  "limitations": [
+    "Only the existing real screenshot and JPEG variation are verified",
+    "Shared cloud CPU and other screenshots can change latency",
+    "Public domain HTTPS and cloud browser acceptance remain pending"
+  ],
+  "release": {
+    "name": "ringlab-fastapi-20261013-concurrency.zip",
+    "files_verified": 42,
+    "sha256": "c9a31d88d585f8fea9d90bc0ab47819948d031c14020d1c5c90cc7cbff3f2ada"
+  }
+}

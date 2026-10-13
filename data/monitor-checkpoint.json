@@ -1,0 +1,35 @@
+{
+  "checked_at": "2026-10-12T10:01:10.940219+00:00",
+  "beijing_time": "2026-10-12 18:01:10",
+  "target": 1000,
+  "status": "target_reached",
+  "total": 1001,
+  "source_modes": {
+    "ALGS": 34,
+    "PUBLIC": 967
+  },
+  "raw_pairs": 1410,
+  "quarantined": 16,
+  "raw_duplicates": 393,
+  "source_game_ids": 1048,
+  "audit": {
+    "records": 1001,
+    "unique_first_rings": 987,
+    "repeated_first_ring_groups": 14,
+    "conflict_groups": 1,
+    "conflict_examples": [
+      [
+        "rg_0332fa5d3cd7241b938bc58b",
+        "rg_879ec21cb4502b81ecb6440c"
+      ]
+    ],
+    "interpretation": "仅为样本内检查，不能证明所有首圈唯一决定最终圈；build 未知时无法确认同机制版本"
+  },
+  "final_radius_counts": {
+    "728": 1000,
+    "1216": 1
+  },
+  "automation_id": "apex",
+  "automation_status": "PAUSED",
+  "added_since_previous_check": 29
+}

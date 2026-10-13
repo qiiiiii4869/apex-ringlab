@@ -1,0 +1,25 @@
+{
+  "known_rings": [
+    {
+      "stage": 1,
+      "x": 6986,
+      "y": 8900,
+      "r": 4825
+    },
+    {
+      "stage": 2,
+      "x": 4542,
+      "y": 8636,
+      "r": 2367
+    },
+    {
+      "stage": 3,
+      "x": 4072,
+      "y": 7995,
+      "r": 1457
+    }
+  ],
+  "map_version": "mp_rr_desertlands_hu",
+  "build": null,
+  "source_mode": "PUBLIC"
+}

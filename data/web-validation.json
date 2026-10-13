@@ -1,0 +1,135 @@
+{
+  "checked_at_beijing": "2026-10-12T21:45:29.314979+08:00",
+  "url": "http://127.0.0.1:8765/",
+  "dataset_sha256": "3a5037816e8277d064bbe635b0fa7ebd0ca08c4206ccd6537210b544c2c78f9a",
+  "reference_count": 579,
+  "python_tests": 46,
+  "javascript_geometry_checks": 6,
+  "javascript_syntax_checked": true,
+  "startup_script_verified": true,
+  "browser_checks": [
+    "real screenshot upload and automatic map registration",
+    "two dim circles detected and numbered preview",
+    "confirmed first and second circles to prediction without boundary clicking",
+    "unified maximum five candidates with probability estimates",
+    "default one circle and five numbered markers",
+    "show all toggle draws five circles",
+    "candidate selection focuses selected circle",
+    "1360 desktop and 390 mobile no horizontal overflow",
+    "no browser error logs"
+  ],
+  "screenshot_capture_available": true,
+  "visual_screenshot_qa_completed": true,
+  "real_game_screenshot_validated": true,
+  "test_fixture": "tests/fixtures/worlds-edge-user.png; real game screenshot, excluded from training",
+  "dataset_and_raw_unchanged": true,
+  "trained_models_unchanged": true,
+  "collection_resumed": false,
+  "public_deployment": false,
+  "code_sha256": {
+    "ringlab/server.py": "c3d74e70cbc1785ff4a867a7a3522f366a222aec761bf17d4838a24881c82c42",
+    "ringlab/vision.py": "4a1b60d45ed01e7386c921d7734068a06619b97ee3826e9959b8868cc344dbf9",
+    "web/index.html": "50703af0cb9d347f312d45837b80aa6938d28a27a8decc945275566b653aa046",
+    "web/app.js": "fc8f89c25b936b9c25c329d0b391dbe37d85d23ff1ee9636111a5d899747c6de",
+    "web/style.css": "9ea69723def90543483219ba05a96e2379dcb83f1367966115ba5a365e0900cc",
+    "web/geometry.mjs": "4aff6c10a2789ebb08d54850904ddcb43f8bfd7a8bab32ebfba40201d55d89f2",
+    "scripts/start-web.ps1": "e0db17798244c59d54714e6c5bc3fc0525e2c800575ede6f69d5bf6c23af7bca",
+    "ringlab/probability.py": "4bdcf3160fe5bb7ca4994588e51654139cada740982c121f9285493b18d576d6",
+    "web/session.mjs": "65ded68fba6d60b3bffc916b069bba88f7ba418c7dbb22de8d05b517ea814295"
+  },
+  "next_step": "Expand real screenshot coverage; confirm label and version; collect new independent games for final probability calibration.",
+  "server_pid_note": "Historical observation only; verify the port owner and exact project command before stopping any process.",
+  "previous_snapshot_checked_at": "2026-10-12T20:05:51.507202+08:00",
+  "real_game_screenshot_count": 1,
+  "recognition_validation_scope": "one supplied full-map screenshot and a downsized JPEG variant; not broad acceptance",
+  "screenshot_case": {
+    "status": "aligned",
+    "width": 1268,
+    "height": 1142,
+    "quality": {
+      "method": "sift_homography",
+      "matched_features": 106,
+      "inliers": 40,
+      "map_corners": [
+        [
+          -1.651781439781189,
+          0.7733964920043945
+        ],
+        [
+          1265.9967041015625,
+          0.727957010269165
+        ],
+        [
+          1266.1661376953125,
+          1140.01171875
+        ],
+        [
+          -0.7236606478691101,
+          1139.0743408203125
+        ]
+      ]
+    },
+    "candidates": [
+      {
+        "x": 9732.095703125,
+        "y": 7421.9521484375,
+        "r": 4902.6201171875,
+        "stage": null,
+        "arc_support": 0.953,
+        "requires_confirmation": true
+      },
+      {
+        "x": 8601.599609375,
+        "y": 7692.2880859375,
+        "r": 2333.349609375,
+        "stage": null,
+        "arc_support": 1.0,
+        "requires_confirmation": true
+      }
+    ],
+    "message": "已对齐地图，找到 2 个安全区圆弧。请核对预览并选择圈次。"
+  },
+  "prediction_count": 5,
+  "probability_reference_count": 193,
+  "probability_calibrated": false,
+  "probability_method": "normalized validation residuals with Jeffreys smoothing",
+  "validation_split_now_used_for_probability_estimation": true,
+  "default_drawn_prediction_circles": 1,
+  "displayed_prediction_markers": 5,
+  "screenshots": [
+    "outputs/qa/user-recognition.png",
+    "outputs/qa/user-predictions.png",
+    "outputs/qa/continue-match.png"
+  ],
+  "prior_browser_checks": [
+    "example prediction",
+    "edit clears results and confirmation",
+    "candidate selection and viewBox focus",
+    "model layer toggle",
+    "geometry fixture upload and manual alignment",
+    "circle stage confirmation and noncontinuous stage rejection",
+    "confirmed fixture circle to prediction",
+    "desktop 1360 CSS layout and mobile 390 CSS layout; no horizontal overflow"
+  ],
+  "match_session": {
+    "storage": "sessionStorage coordinates and count only",
+    "max_stages": 3,
+    "browser_checks": [
+      "first screenshot then second-only fixture preserves first coordinates",
+      "third-only fixture adds third and disables continuation",
+      "manual continuation preserves previous stages",
+      "rejected stage gap and canceled upload preserve previous stages",
+      "refresh restores stages and requires confirmation",
+      "new match clears circles predictions overlay and upload; refresh remains empty",
+      "switching prediction stage count retains recorded stages",
+      "1360 and 390 layouts have no horizontal overflow"
+    ],
+    "real_screenshot_count": 1,
+    "generated_fixtures": [
+      "outputs/qa/second-ring-only.png",
+      "outputs/qa/third-ring-only.png"
+    ],
+    "screenshot": "outputs/qa/continue-match.png",
+    "javascript_tests": "node tests/test-match-session.mjs passed"
+  }
+}

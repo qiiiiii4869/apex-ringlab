@@ -1,0 +1,31 @@
+# Preparation only: no public listener or proxy, no domain is required.
+services:
+  ringlab:
+    image: ringlab:${RINGLAB_RELEASE:-20261013-concurrency}
+    network_mode: host
+    environment:
+      RINGLAB_HOST: 127.0.0.1
+      RINGLAB_PORT: 8765
+      RINGLAB_TRUSTED_PROXIES: ''
+      RINGLAB_PREDICTION_WORKERS: 1
+      RINGLAB_PREDICTION_QUEUE: 7
+      RINGLAB_RECOGNITION_QUEUE: 3
+      RINGLAB_UPLOAD_TIMEOUT: 20
+      RINGLAB_TASK_TIMEOUT: 45
+      RINGLAB_PREDICTION_RATE: 60
+      RINGLAB_RECOGNITION_RATE: 10
+      RINGLAB_CONNECTIONS: 32
+    restart: unless-stopped
+    init: true
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m
+    mem_limit: 1g
+    cpus: 2
+    pids_limit: 128
+    stop_grace_period: 90s
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: '3'

@@ -1,0 +1,19 @@
+{
+  "source": "apexlegendsstatus_ringguessr",
+  "classification": {
+    "PUBLIC": {
+      "game_mode": "ranked",
+      "evidence": {
+        "type": "user_confirmation",
+        "confirmed_on": "2026-10-11",
+        "statement": "用户确认 Ring Guessr 的 PUBLIC 来源属于排位，可用于本项目。"
+      }
+    },
+    "ALGS": {
+      "game_mode": "tournament",
+      "evidence": {
+        "type": "source_game_label"
+      }
+    }
+  }
+}

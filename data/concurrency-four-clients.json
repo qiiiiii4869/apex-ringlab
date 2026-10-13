@@ -1,0 +1,67 @@
+{
+  "created_at": "2026-10-13T11:31:57.093915+00:00",
+  "platform": "Linux-5.15.0-191-generic-x86_64-with-glibc2.36",
+  "python": "3.13.13",
+  "concurrency": 4,
+  "scenarios": {
+    "predict_four_clients": {
+      "requests": 4,
+      "statuses": {
+        "200": 4
+      },
+      "success_rate": 1.0,
+      "max_seconds": 0.23204668600010336
+    },
+    "predict": {
+      "requests": 4,
+      "statuses": {
+        "200": 4
+      },
+      "success_rate": 1.0,
+      "median_seconds": 0.15026730100021268,
+      "max_seconds": 0.2289666489996307,
+      "successful_max_seconds": 0.2289666489996307
+    },
+    "recognize_four_clients": {
+      "requests": 4,
+      "statuses": {
+        "200": 4
+      },
+      "success_rate": 1.0,
+      "max_seconds": 10.897735772000033
+    },
+    "recognize": {
+      "requests": 4,
+      "statuses": {
+        "200": 4
+      },
+      "success_rate": 1.0,
+      "median_seconds": 6.3498194429998875,
+      "max_seconds": 10.142558332000135,
+      "successful_max_seconds": 10.142558332000135
+    }
+  },
+  "process_peaks": {
+    "rss_bytes": 794890240,
+    "cpu_percent_one_core": 207.0,
+    "includes_child_processes": true
+  },
+  "health_after": {
+    "status": "ready",
+    "models": [
+      1,
+      2,
+      3
+    ],
+    "pending": {
+      "predict": 0,
+      "recognize": 0
+    }
+  },
+  "actual_image_fixture_used": true,
+  "limitations": [
+    "Measurements reflect only this host and tested scenarios, not guaranteed capacity",
+    "Burst rejection is expected bounded overload feedback, not an inference error",
+    "Public HTTPS and browser interactions are not validated by this script"
+  ]
+}

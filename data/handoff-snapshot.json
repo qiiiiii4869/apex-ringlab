@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-10-11T17:04:02.694865+00:00",
+  "beijing_time": "2026-10-12 01:04:02",
+  "total": 340,
+  "source_modes": {
+    "ALGS": 34,
+    "PUBLIC": 306
+  },
+  "source_game_ids": 344,
+  "raw_pairs": 376,
+  "quarantined": 8,
+  "quarantine_reasons": {
+    "后续圈必须缩小且包含在上一圈内": 5,
+    "来源模式必须为 ALGS 或 PUBLIC": 2,
+    "最终圈必须位于已知安全区内": 1
+  },
+  "raw_duplicates": 28,
+  "audit": {
+    "records": 340,
+    "unique_first_rings": 339,
+    "repeated_first_ring_groups": 1,
+    "conflict_groups": 0,
+    "conflict_examples": [],
+    "interpretation": "仅为样本内检查，不能证明所有首圈唯一决定最终圈；build 未知时无法确认同机制版本"
+  },
+  "status": "paused_by_user",
+  "automation_id": "apex",
+  "automation_status": "PAUSED"
+}

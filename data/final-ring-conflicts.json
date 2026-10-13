@@ -1,0 +1,94 @@
+{
+  "audit": {
+    "records": 1001,
+    "unique_first_rings": 987,
+    "repeated_first_ring_groups": 14,
+    "conflict_groups": 1,
+    "conflict_examples": [
+      [
+        "rg_0332fa5d3cd7241b938bc58b",
+        "rg_879ec21cb4502b81ecb6440c"
+      ]
+    ],
+    "interpretation": "仅为样本内检查，不能证明所有首圈唯一决定最终圈；build 未知时无法确认同机制版本"
+  },
+  "records": [
+    {
+      "id": "rg_0332fa5d3cd7241b938bc58b",
+      "source_mode": "PUBLIC",
+      "map_version": "mp_rr_desertlands_hu",
+      "build": null,
+      "source_game_id": "38c32ac2d76587cef2739d7b0efb79dd",
+      "source_game_ids": [
+        "38c32ac2d76587cef2739d7b0efb79dd"
+      ],
+      "known_rings": [
+        {
+          "stage": 1,
+          "x": 6966,
+          "y": 10232,
+          "r": 4825
+        },
+        {
+          "stage": 2,
+          "x": 4764,
+          "y": 11322,
+          "r": 2367
+        },
+        {
+          "stage": 3,
+          "x": 4461,
+          "y": 12096,
+          "r": 1457
+        }
+      ],
+      "final_ring": {
+        "x": 3940,
+        "y": 12251,
+        "r": 728,
+        "label": "ringguessr_final",
+        "stage": null
+      },
+      "collected_at": "2026-10-12T07:24:46.7122271Z"
+    },
+    {
+      "id": "rg_879ec21cb4502b81ecb6440c",
+      "source_mode": "PUBLIC",
+      "map_version": "mp_rr_desertlands_hu",
+      "build": null,
+      "source_game_id": "fff9e84dfb2e8757c0b46143e0292e7c",
+      "source_game_ids": [
+        "fff9e84dfb2e8757c0b46143e0292e7c"
+      ],
+      "known_rings": [
+        {
+          "stage": 1,
+          "x": 6966,
+          "y": 10232,
+          "r": 4825
+        },
+        {
+          "stage": 2,
+          "x": 4764,
+          "y": 11322,
+          "r": 2367
+        },
+        {
+          "stage": 3,
+          "x": 4461,
+          "y": 12096,
+          "r": 1457
+        }
+      ],
+      "final_ring": {
+        "x": 4461,
+        "y": 12096,
+        "r": 1216,
+        "label": "ringguessr_final",
+        "stage": null
+      },
+      "collected_at": "2026-10-12T09:40:14.7021909Z"
+    }
+  ],
+  "note": "Sample-level conflicts only; game build and internal target stage remain unknown. Preserve distinct targets and verify provenance and label meaning before drawing conclusions."
+}

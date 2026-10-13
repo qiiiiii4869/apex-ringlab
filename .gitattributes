@@ -1,0 +1,3 @@
+# Preserve exact bytes: model manifests contain dataset/model SHA-256 hashes.
+# This also overrides a contributor's global core.autocrlf setting.
+* -text

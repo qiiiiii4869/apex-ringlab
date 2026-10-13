@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#121718">
+  <title>圈位实验室 · Apex 世界尽头</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" type="module"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="圈位实验室首页"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="16"/><circle cx="23" cy="23" r="8"/><path d="M20 0v8M20 32v8M0 20h8M32 20h8"/></svg><span>圈位实验室<small>WORLD'S EDGE / APEX</small></span></a>
+    <div class="top-status"><span class="live-dot"></span><span id="service-mode">研究试用版</span> <span class="separator">/</span><span id="sample-count">正在连接服务…</span></div>
+  </header>
+  <main>
+    <section class="intro"><div><div class="eyebrow">01 / 世界尽头 · PUBLIC 排位</div><h1>已知圈，推测最终落点<span>。</span></h1><p>导入地图、确认圈次，查看最多 5 个预测圈与估计命中概率。</p></div><button id="load-example" class="secondary">载入示例 <span aria-hidden="true">↗</span></button></section>
+    <div class="workspace">
+      <aside class="input-panel panel">
+        <div class="section-title"><span class="step">01</span><h2>提供已知圈</h2><span class="mini-label">INPUT</span></div>
+        <label class="upload-box" for="screenshot-input"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 15v5h16v-5M12 16V3m-5 5 5-5 5 5"/></svg><strong>导入完整地图截图</strong><span>JPG / PNG · 最大 8 MB</span><small id="image-processing">截图发送到本站服务临时处理，不保存图片</small></label>
+        <input id="screenshot-input" class="file-input" type="file" accept="image/jpeg,image/png">
+        <div class="match-status"><strong id="match-progress">本局尚未记录圈位</strong><span id="match-persistence">圈位保存在当前标签页，刷新后可继续。</span></div>
+        <div class="match-actions"><button id="continue-upload" class="secondary" disabled>继续上传本局截图</button><button id="new-match" class="link-button">开始新对局</button></div>
+        <input id="continue-screenshot-input" class="file-input" type="file" accept="image/jpeg,image/png" aria-label="继续上传本局截图文件">
+        <div id="screenshot-status" class="small-note" aria-live="polite">也可以直接输入坐标，或在地图上取点。</div>
+        <div class="divider"><span>手动输入 / 校正</span></div>
+        <fieldset class="stage-selector"><legend>本次预测使用</legend><button type="button" data-count="1" class="active" aria-pressed="true">首圈</button><button type="button" data-count="2" aria-pressed="false">前两圈</button><button type="button" data-count="3" aria-pressed="false">前三圈</button></fieldset>
+        <div id="ring-editors"></div>
+        <p class="small-note">本局首圈会保留。后续截图只有第 2 或第 3 圈时，点击“继续上传本局截图”补充即可。当前支持前三圈。</p>
+        <label class="confirmation"><input id="map-confirmed" type="checkbox"><span>我已确认地图为世界尽头，圈位与圈次正确</span></label>
+        <button id="predict" class="primary" disabled>在地图上预测 <span aria-hidden="true">→</span></button>
+        <p id="form-status" class="form-status" role="status">先填入圈位并确认，或载入示例。</p>
+      </aside>
+      <section class="map-panel panel">
+        <div class="map-top"><div><span class="eyebrow">WORLD'S EDGE</span><h2>世界尽头</h2></div><div class="map-controls"><button id="zoom-out" aria-label="缩小地图">−</button><button id="zoom-in" aria-label="放大地图">+</button><button id="reset-view">复位</button></div></div>
+        <div class="map-stage" id="map-stage">
+          <svg id="map-svg" viewBox="0 0 16384 16384" aria-label="世界尽头圈位地图，可滚轮缩放、拖动平移" role="img">
+            <image href="/assets/worlds-edge.jpg" width="16384" height="16384"/>
+            <image id="screenshot-layer" width="16384" height="16384" opacity="0.78"/>
+            <g id="known-layer"></g><g id="candidate-layer"></g><g id="draft-layer"></g>
+          </svg>
+          <div id="drawing-hint" class="drawing-hint" hidden></div>
+          <div id="map-empty" class="map-empty"><strong>让圈位成为线索</strong><span>填入已知安全区后，预测会显示在这里。</span></div>
+          <div id="pointer-coordinates" class="pointer-coordinates">X —　Y —</div>
+        </div>
+        <div class="map-legend"><label><input id="show-known" type="checkbox" checked><i class="dot known"></i>最近已知圈</label><label><input id="show-all-known" type="checkbox">叠加本局已知圈</label><label><input id="show-candidates" type="checkbox" checked><i class="dot candidate"></i>预测结果</label><label><input id="show-all-predictions" type="checkbox">叠加全部预测圈</label><label id="screenshot-toggle-label" hidden><input id="show-screenshot" type="checkbox">截图叠加</label></div>
+      </section>
+      <aside class="results-panel panel">
+        <div class="section-title"><span class="step">02</span><h2>预测结果</h2><span class="mini-label">TOP 5</span></div>
+        <div id="result-placeholder" class="result-placeholder"><svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="30"/><circle cx="47" cy="45" r="13"/><path d="M40 2v14M40 64v14M2 40h14M64 40h14"/></svg><h3>等待已知圈</h3><p>预测结果会合并相近圈位，并按估计命中概率排序。</p></div>
+        <div id="results" hidden>
+          <p id="prediction-count" class="prediction-summary"></p>
+          <div class="result-section-heading"><h3>按估计命中概率排序</h3><span id="matching-status">—</span></div>
+          <p id="matching-message" class="small-note"></p><div id="candidate-list"></div>
+          <details class="probability-explanation"><summary>概率代表什么？</summary><p id="probability-note" class="small-note"></p></details>
+        </div>
+        <details class="research-note"><summary>使用范围与当前局限</summary><p>首圈单独预测仍较弱，提供更多已知圈更有参考价值。预测目标是源站揭晓的目标圈，内部圈次尚未核实。</p><p>底图与模型来自历史世界尽头数据，当前排位版本适用性尚未确认。自动识别后请检查预览并确认圈次。</p><p>模型与历史圈型统一展示，最多 5 个。历史圈型按本次已知圈平移、缩放并限制在安全区内；相近圈位已合并。</p><span id="reference-count"></span></details>
+      </aside>
+    </div>
+    <footer><span>圈位实验室 / 本地预览</span><span>仅供研究与参考 · 无需登录</span><a href="https://apexlegendsstatus.com/algs/ring-guessr" target="_blank" rel="noopener noreferrer">数据来源：Ring Guessr ↗</a></footer>
+  </main>
+  <dialog id="screenshot-dialog">
+    <div class="dialog-heading"><div><div class="eyebrow">SCREENSHOT / 确认圈位</div><h2>先对齐地图，再确认安全区</h2></div><button id="close-screenshot" aria-label="关闭截图窗口">×</button></div>
+    <p id="dialog-status" class="small-note" role="status"></p>
+    <p id="upload-context" class="upload-context"></p>
+    <div id="crop-area" hidden><p>依次点击完整地图区域的两个对角。框内必须包含整张地图，不要只框安全区。</p><div class="crop-container"><img id="original-screenshot" alt="待框选的游戏截图"><svg id="crop-svg" aria-label="点击截图框选地图区域"></svg></div><div class="crop-actions"><button id="use-full-image" class="secondary">图片本身就是完整地图</button><button id="reset-crop" class="secondary">重新框选</button><button id="apply-crop" class="primary" disabled>按此区域对齐</button></div></div>
+    <div id="recognized-area" hidden><div class="recognition-preview"><img id="aligned-preview" alt="对齐后的地图截图"><svg id="recognition-overlay" viewBox="0 0 16384 16384" aria-label="自动识别的编号安全区"></svg></div><div><h3>已识别的圈，确认圈次即可</h3><p class="small-note">编号与左侧预览对应。为安全区选择圈次；玩家标记或错误圆弧请保持“不采用”。</p><div id="recognition-list"></div><button id="apply-detected" class="primary">采用所选圈位</button><button id="manual-from-screenshot" class="secondary">叠加截图并手动取点</button><button id="redo-crop" class="link-button">地图没有对齐？重新框选</button></div></div>
+  </dialog>
+</body>
+</html>

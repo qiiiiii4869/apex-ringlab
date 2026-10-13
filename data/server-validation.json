@@ -1,0 +1,115 @@
+{
+  "created_at": "2026-10-13T11:09:38.833158+00:00",
+  "platform": "Linux-5.15.0-191-generic-x86_64-with-glibc2.36",
+  "python": "3.13.13",
+  "concurrency": 4,
+  "scenarios": {
+    "predict_two_clients": {
+      "requests": 2,
+      "statuses": {
+        "200": 2
+      },
+      "success_rate": 1.0,
+      "max_seconds": 0.1085608549999506
+    },
+    "predict": {
+      "requests": 8,
+      "statuses": {
+        "200": 3,
+        "503": 5
+      },
+      "success_rate": 0.375,
+      "median_seconds": 0.0035617880000700097,
+      "max_seconds": 0.176375594999854,
+      "successful_max_seconds": 0.176375594999854
+    },
+    "recognize_two_clients": {
+      "requests": 2,
+      "statuses": {
+        "200": 2
+      },
+      "success_rate": 1.0,
+      "max_seconds": 26.541588131000026
+    },
+    "recognize": {
+      "requests": 8,
+      "statuses": {
+        "200": 2,
+        "503": 6
+      },
+      "success_rate": 0.25,
+      "median_seconds": 0.02269165249992966,
+      "max_seconds": 25.030583889000127,
+      "successful_max_seconds": 25.030583889000127
+    }
+  },
+  "process_peaks": {
+    "rss_bytes": 783908864,
+    "cpu_percent_one_core": 204.0,
+    "includes_child_processes": true
+  },
+  "health_after": {
+    "status": "ready",
+    "models": [
+      1,
+      2,
+      3
+    ],
+    "pending": {
+      "predict": 0,
+      "recognize": 0
+    }
+  },
+  "actual_image_fixture_used": true,
+  "limitations": [
+    "Measurements reflect only this host and tested scenarios, not guaranteed capacity",
+    "Burst rejection is expected bounded overload feedback, not an inference error",
+    "Public HTTPS and browser interactions are not validated by this script"
+  ],
+  "verification": {
+    "python_tests_linux": 60,
+    "pip_check": "passed",
+    "official_python_image_import": "passed",
+    "official_pypi_wheel_sha256_checks": 27,
+    "dataset_and_model_fingerprints": "passed_at_startup",
+    "runtime_state": {
+      "health": {
+        "status": "ready",
+        "models": [
+          1,
+          2,
+          3
+        ],
+        "pending": {
+          "predict": 0,
+          "recognize": 0
+        }
+      },
+      "docker_health": "healthy",
+      "image_id": "sha256:bf6a964887b88605dd309a0be55f175f6c05b63afe976ba8d58d6adba2978998",
+      "container": "ringlab-internal-ringlab-1",
+      "user": "ringlab",
+      "read_only": true,
+      "memory_limit_bytes": 1073741824,
+      "cpu_limit_nano": 2000000000,
+      "restart_policy": "unless-stopped",
+      "oom_killed": false,
+      "listen": "127.0.0.1:8765",
+      "temporary_wheel_server_stopped": true,
+      "docker_boot_enabled": true,
+      "page_assets_and_js_mime": "passed",
+      "stages_1_2_3_prediction": "passed",
+      "origin_and_private_files": "passed",
+      "container_restart_recovery": "passed",
+      "whole_ecs_reboot_tested": false,
+      "domain": null,
+      "public_https": "not_configured"
+    },
+    "release_archive": "ringlab-fastapi-20261013-linux.zip",
+    "release_files_verified": 41,
+    "release_archive_sha256": "8e2412fc61c1d717b1d33c18df39cebd5bf42f20aabeb43a2b445e6aa4fceb19",
+    "whole_server_reboot": "not_tested",
+    "cloud_browser_acceptance": "pending_domain_and_https",
+    "collection": "paused"
+  }
+}

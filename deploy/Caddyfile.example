@@ -1,0 +1,17 @@
+# Replace rings.example.com with the actual filed domain.
+rings.example.com {
+    # Caddy terminates HTTPS and overwrites incoming forwarding headers.
+    request_body {
+        max_size 12MB
+    }
+    reverse_proxy 127.0.0.1:8765 {
+        transport http {
+            response_header_timeout 70s
+        }
+    }
+    # Access logging is intentionally not enabled: avoid IP/URL/visitor data.
+    handle_errors {
+        header Content-Type application/json
+        respond `{"error":"请求超过限制或代理处理失败，请稍后重试；本局圈位已保留"}` {err.status_code}
+    }
+}
